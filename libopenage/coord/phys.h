@@ -7,6 +7,7 @@
 #include "coord/declarations.h"
 #include "util/hash.h"
 #include "util/misc.h"
+#include <numbers>
 
 namespace openage {
 

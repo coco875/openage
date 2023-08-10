@@ -81,3 +81,5 @@ perf.data*
 # copyrighted assets
 /assets/converted/
 /assets/terrain/
+
+download/*

@@ -227,7 +227,7 @@ def bindir_creation(args, defines):
         os.symlink(linkto, name)
 
     # create the build dir and symlink it to 'bin'
-    forcesymlink(bindir, 'bin')
+    # forcesymlink(bindir, 'bin')
 
     return bindir
 
@@ -236,6 +236,7 @@ def invoke_cmake(args, bindir, defines, options):
     """
     run cmake.
     """
+    # shutil.copyfile(bindir, "bin")
 
     # the project root directory contains this configure file.
     project_root = os.path.dirname(os.path.realpath(__file__))
@@ -316,6 +317,7 @@ def invoke_cmake(args, bindir, defines, options):
             exit(0)
         else:
             print("(now running cmake:)\n")
+            print(invocation)
             exit(subprocess.call(invocation))
     except FileNotFoundError:
         print("cmake was not found")
